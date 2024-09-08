@@ -1,0 +1,216 @@
+/*
+    Author: RightPath Team
+*/
+
+/* login */
+.login-button {
+    background-color: #007FFF;
+    color: white;
+    font-size: 14px;
+    padding: 8px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: 0.3s background-color;
+  }
+  
+  .login-button:hover {
+    background-color: rgb(255, 60, 86);
+  }
+  /* end login */
+  
+  /* hamburger menu */
+  /* hamburger icon re-location */
+  @media (max-width: 384px) {
+    /* Position the top bar elements correctly */
+    .navbar {
+        justify-content: space-between;
+        padding-right: 10px;
+    }
+    
+    /* Position the hamburger icon to the right */
+    .navbar-toggler {
+        position: absolute;
+        right: 0;
+        top: 0;
+        margin-right: 10px;
+        margin-top: 10px;
+    }
+  }
+  /* end hamburger menu */
+  
+  /* navbar */
+  .navbar {
+    background-color: white;
+    height: 80px;
+    margin: 20px;
+    border-radius: 16px;
+    padding: 0.5rem;
+  }
+  
+  .navbar-brand {
+    transition: transform 0.3s ease;
+    margin-left: 1%;
+  }
+  
+  .navbar-brand:hover {
+    transform: scale(1.1); /* Zoom in */
+  }
+  
+  .navbar-toggler {
+    border: none;
+    font-size: 1.25rem;
+  }
+  
+  .navbar-toggler:focus, .btn-close:focus {
+    box-shadow: none;
+    outline: none;
+  }
+  
+  .nav-link{
+    color: #36454F;
+    font-weight: 500;
+    position: relative;
+  }
+  
+  .nav-link:hover, .nav-link:active {
+    color: black;
+  }
+  
+  .nav-link.active::before {
+    width: 100%;
+    visibility: visible;
+  }
+  
+  
+  @media (min-width: 991px){
+    .nav-link::before{
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 0;
+      height: 2px;
+      background-color: #007FFF;
+      visibility: hidden;
+      transition: 0.3s ease-in-out;
+    }
+    .nav-link:hover::before, .nav-link:active::before{
+      width: 100%;
+      visibility: visible;
+    }
+  }
+  /* end navbar */
+  
+  /* Hero section */
+  /* add image to hero section */
+  .hero-section {
+    background: url('../assets/images/hero.jfif') no-repeat center;
+    background-size: cover;
+    width: 100%;
+  }  
+  
+  /* darken the hero section */
+  .hero-section::before{
+    background-color: rgba(0, 0, 0, 0.6);
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+  
+  .hero-section .container {
+    height: 100vh;
+    z-index: 1;
+    position: relative;
+  }
+  /* end hero section */
+  
+  /* media resizing */
+  /* toggle menu re-sizing for mobile */
+  @media (min-width: 320px) and (max-width: 500px) {
+    #offcanvasNavbar {
+      width: 160px; /* Set desired width */
+    }
+  }
+  
+  /* toggle menu re-sizing for tablets */
+  @media (min-width: 501px) and (max-width: 768px) {
+    #offcanvasNavbar {
+      width: 220px; /* Set desired width */
+    }
+  
+    .navbar {
+      width: 84%;
+      margin-left: 8%;
+      margin-right: 8%;
+    }
+  }
+  
+  /* navbar re-sizing for laptops */
+  @media (min-width: 769px) and (max-width: 1024px) {
+    .nav-link {
+      font-weight: 400; /* Adjust font weight here */
+    }
+  
+    .login-button {
+      margin-right: 1%;
+    }
+  }
+  
+  /* navbar re-sizing for regular resolution */
+  @media (min-width: 1280px) and (max-width: 1440px) {
+    .navbar {
+      width: 90%;
+      margin-left: 5%;
+      margin-right: 5%;
+    }
+  
+    .login-button {
+      margin-right: 1%;
+    }
+  }
+  
+  /* navbar re-sizing for higher resolution */
+  @media (min-width: 1600px) and (max-width: 1920px) {
+    .navbar {
+      width: 80%;
+      margin-left: 10%;
+      margin-right: 10%;
+    }
+  
+    .login-button {
+      margin-right: 1%;
+    }
+  }
+  
+  /* navbar re-sizing for 2k resolution */
+  @media (min-width: 2048px) and (max-width: 2560px) {
+    .navbar {
+      width: 70%;
+      margin-left: 15%;
+      margin-right: 15%;
+      height: 120px;
+  
+      border-radius: 16px;
+      padding: 0.5rem;
+    }
+  
+    .nav-link {
+      font-size: x-large;
+    }
+  
+    .navbar-brand img {
+      height: 65px; /* Adjust logo height */
+      width: auto;  /* Maintain aspect ratio */
+    }
+  
+    .login-button {
+      font-size: x-large;
+      margin-right: 1%;
+    }
+  }
+  
+  /* end media resizing */
