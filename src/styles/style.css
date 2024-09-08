@@ -23,18 +23,35 @@
   @media (max-width: 384px) {
     /* Position the top bar elements correctly */
     .navbar {
+        display: flex;
         justify-content: space-between;
+        align-items: center; /* Center items vertically in the navbar */
         padding-right: 10px;
+        position: relative; /* Ensure the navbar is a positioned container */
     }
     
     /* Position the hamburger icon to the right */
     .navbar-toggler {
-        position: absolute;
-        right: 0;
-        top: 0;
-        margin-right: 10px;
-        margin-top: 10px;
+        display: flex;
+        position: relative;
+        justify-content: center;
+        padding: 0;
+        border: none;
+        align-items: center;
+        margin-right: 5px;
+        margin-top: 5px;
+        background: transparent;
+        background-size: contain;
     }
+
+    .navbar-toggler-icon {
+      display: inline-block;
+      width: 24px; /* Adjust width */
+      height: 24px; /* Adjust height */
+      background-image: none; /* Bootstrap default icon is CSS-based */
+    }
+
+    
   }
   /* end hamburger menu */
   
