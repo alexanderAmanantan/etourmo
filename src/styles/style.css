@@ -123,8 +123,10 @@
   /* add image to hero section */
   .hero-section {
     background: url('../assets/images/hero.jfif') no-repeat center;
-    background-size: cover;
+    background-size: 100%;
     width: 100%;
+    height: 40vh;
+    position: relative;
   }  
   
   /* darken the hero section */
@@ -139,9 +141,11 @@
   }
   
   .hero-section .container {
-    height: 100vh;
-    z-index: 1;
-    position: relative;
+    position: absolute;
+    top: 50%; /* Adjust the top value to move the text higher or lower */
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
   }
   /* end hero section */
   

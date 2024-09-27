@@ -5,7 +5,7 @@ import '../styles/style.css'; // Import custom CSS if needed
 function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activePage, setActivePage] = useState('/');
-  const location = useLocation();
+  /*const location = useLocation();*/
 
   const handleToggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);

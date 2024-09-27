@@ -1,0 +1,66 @@
+/* src/pages/TravelPackages.css */
+.travel-packages {
+    padding: 20px;
+    text-align: center;
+}
+
+.package-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.package-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    margin: 10px;
+    width: 300px;
+    text-align: left;
+    opacity: 0; /* Start with cards hidden */
+    transform: translateY(20px); /* Start with cards moved down */
+    animation: floatIn 1s forwards; /* Apply animation */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease; /* Ensure hover effect is applied */
+}
+
+/* Keyframes for floating effect */
+@keyframes floatIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Hover effect */
+.package-card:hover {
+    transform: translateY(-155px); /* Move the card up slightly */
+    opacity: 1; /* Fades the card slightly */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3); /* Adds shadow for depth */
+}
+
+/* Optional: Increase contrast on hover */
+.package-card:hover .package-title,
+.package-card:hover .package-description {
+    color: #333; /* Example contrast color */
+}
+
+.package-image {
+    width: 100%;
+    height: auto;
+}
+
+.package-title {
+    font-size: 1.5em;
+    margin: 10px 0;
+    text-align: center;
+}
+
+.package-description {
+    font-size: 1em;
+    padding: 0 10px 10px;
+    text-align: center;
+}
