@@ -1,4 +1,3 @@
-// App.js
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './App.css';
@@ -12,6 +11,8 @@ import Transportation from './pages/Transportation';
 import TripPlanner from './pages/TripPlanner';
 import Reviews from './pages/Reviews';
 import AboutUs from './pages/AboutUs';
+import SignIn from './auth/loginsignup/signIn';
+import SignUp from './auth/loginsignup/signUp';
 
 // Import Navbar component
 import Navbar from './component/Navbar';
@@ -30,6 +31,8 @@ function App() {
             <Route path="/trip-planner" element={<TripPlanner />} />
             <Route path="/reviews" element={<Reviews />} />
             <Route path="/about-us" element={<AboutUs />} />
+            <Route path="/SignIn" element={<SignIn />} />
+            <Route path="/SignUp" element={<SignUp />} />
           </Routes>
         </div>
       </Router>

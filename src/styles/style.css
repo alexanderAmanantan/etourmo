@@ -2,21 +2,35 @@
     Author: RightPath Team
 */
 
-/* login */
-.login-button {
-    background-color: #007FFF;
-    color: white;
-    font-size: 14px;
-    padding: 8px 20px;
-    border-radius: 50px;
+/* login and signup buttons */
+.navbar .login-button, .navbar .signup-button {
+    background-color: white;
+    color: black;
+    font-size: 10px;
+    padding: 5px 5px;
+    border-radius: 5px;
     text-decoration: none;
+    visibility: visible;
     transition: 0.3s background-color;
+    align-items: center;
+    width: 50px;
+    height: 27.5px;
+    margin-right: 10px;
   }
   
-  .login-button:hover {
-    background-color: rgb(255, 60, 86);
+  .login-button:hover, .signup-button:hover{
+    background-color: #007FFF !important;
   }
-  /* end login */
+
+  .index-button-container {
+    display: flex;
+    flex-direction: column; /* Stack the buttons vertically */
+    align-items: center; /* Center horizontally */
+    justify-content: center; /* Center vertically */
+    height: 100%; /* Make the container take full height */
+  }
+  /* end login and signup buttons */
+
   
   /* hamburger menu */
   /* hamburger icon re-location */
@@ -87,6 +101,8 @@
     color: #36454F;
     font-weight: 500;
     position: relative;
+    display: flex;
+    margin-top:0px;
   }
   
   .nav-link:hover, .nav-link:active {
@@ -172,12 +188,24 @@
   
   /* navbar re-sizing for laptops */
   @media (min-width: 769px) and (max-width: 1024px) {
+    .navbar {
+      display: flex; /* Use flexbox */
+      justify-content: space-between; /* Space between items */
+      align-items: center; /* Center align */
+      background-color: white;
+      height: 80px;
+      margin: 20px;
+      border-radius: 16px;
+      padding: 0.5rem;
+  }
+
     .nav-link {
       font-weight: 400; /* Adjust font weight here */
-    }
-  
-    .login-button {
-      margin-right: 1%;
+      color: #36454F;
+      font-size: 14px; /* Set specific font size for nav links */
+      position: relative;
+      display: flex;
+      margin: 0 10px; /* Consistent margin */
     }
   }
   
@@ -191,6 +219,7 @@
   
     .login-button {
       margin-right: 1%;
+      display: flex;
     }
   }
   
@@ -204,6 +233,7 @@
   
     .login-button {
       margin-right: 1%;
+      display: flex;
     }
   }
   
@@ -231,7 +261,9 @@
     .login-button {
       font-size: x-large;
       margin-right: 1%;
+      display: flex;
     }
   }
   
   /* end media resizing */
+  
