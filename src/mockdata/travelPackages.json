@@ -1,0 +1,17 @@
+
+[
+    {
+      "id": 1,
+      "title": "Amazing Bangkok",
+      "content": "Explore the vibrant city of Bangkok.",
+      "image": "https://via.placeholder.com/300x200?text=Bangkok"
+    },
+    {
+      "id": 2,
+      "title": "Beautiful Bali",
+      "content": "Relax on the stunning beaches of Bali.",
+      "image": "https://via.placeholder.com/300x200?text=Bali"
+    }
+
+  ]
+  

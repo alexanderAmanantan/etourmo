@@ -1,0 +1,269 @@
+/*
+    Author: RightPath Team
+*/
+
+/* login and signup buttons */
+.navbar .login-button, .navbar .signup-button {
+    background-color: white;
+    color: black;
+    font-size: 10px;
+    padding: 5px 5px;
+    border-radius: 5px;
+    text-decoration: none;
+    visibility: visible;
+    transition: 0.3s background-color;
+    align-items: center;
+    width: 50px;
+    height: 27.5px;
+    margin-right: 10px;
+  }
+  
+  .login-button:hover, .signup-button:hover{
+    background-color: #007FFF !important;
+  }
+
+  .index-button-container {
+    display: flex;
+    flex-direction: column; /* Stack the buttons vertically */
+    align-items: center; /* Center horizontally */
+    justify-content: center; /* Center vertically */
+    height: 100%; /* Make the container take full height */
+  }
+  /* end login and signup buttons */
+
+  
+  /* hamburger menu */
+  /* hamburger icon re-location */
+  @media (max-width: 384px) {
+    /* Position the top bar elements correctly */
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center; /* Center items vertically in the navbar */
+        padding-right: 10px;
+        position: relative; /* Ensure the navbar is a positioned container */
+    }
+    
+    /* Position the hamburger icon to the right */
+    .navbar-toggler {
+        display: flex;
+        position: relative;
+        justify-content: center;
+        padding: 0;
+        border: none;
+        align-items: center;
+        margin-right: 5px;
+        margin-top: 5px;
+        background: transparent;
+        background-size: contain;
+    }
+
+    .navbar-toggler-icon {
+      display: inline-block;
+      width: 24px; /* Adjust width */
+      height: 24px; /* Adjust height */
+      background-image: none; /* Bootstrap default icon is CSS-based */
+    }
+
+    
+  }
+  /* end hamburger menu */
+  
+  /* navbar */
+  .navbar {
+    background-color: white;
+    height: 80px;
+    margin: 20px;
+    border-radius: 16px;
+    padding: 0.5rem;
+  }
+  
+  .navbar-brand {
+    transition: transform 0.3s ease;
+    margin-left: 1%;
+  }
+  
+  .navbar-brand:hover {
+    transform: scale(1.1); /* Zoom in */
+  }
+  
+  .navbar-toggler {
+    border: none;
+    font-size: 1.25rem;
+  }
+  
+  .navbar-toggler:focus, .btn-close:focus {
+    box-shadow: none;
+    outline: none;
+  }
+  
+  .nav-link{
+    color: #36454F;
+    font-weight: 500;
+    position: relative;
+    display: flex;
+    margin-top:0px;
+  }
+  
+  .nav-link:hover, .nav-link:active {
+    color: black;
+  }
+  
+  .nav-link.active::before {
+    width: 100%;
+    visibility: visible;
+  }
+  
+  
+  @media (min-width: 991px){
+    .nav-link::before{
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 0;
+      height: 2px;
+      background-color: #007FFF;
+      visibility: hidden;
+      transition: 0.3s ease-in-out;
+    }
+    .nav-link:hover::before, .nav-link:active::before{
+      width: 100%;
+      visibility: visible;
+    }
+  }
+  /* end navbar */
+  
+  /* Hero section */
+  /* add image to hero section */
+  .hero-section {
+    background: url('../assets/images/hero.jfif') no-repeat center;
+    background-size: 100%;
+    width: 100%;
+    height: 40vh;
+    position: relative;
+  }  
+  
+  /* darken the hero section */
+  .hero-section::before{
+    background-color: rgba(0, 0, 0, 0.6);
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+  
+  .hero-section .container {
+    position: absolute;
+    top: 50%; /* Adjust the top value to move the text higher or lower */
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+  }
+  /* end hero section */
+  
+  /* media resizing */
+  /* toggle menu re-sizing for mobile */
+  @media (min-width: 320px) and (max-width: 500px) {
+    #offcanvasNavbar {
+      width: 160px; /* Set desired width */
+    }
+  }
+  
+  /* toggle menu re-sizing for tablets */
+  @media (min-width: 501px) and (max-width: 768px) {
+    #offcanvasNavbar {
+      width: 220px; /* Set desired width */
+    }
+  
+    .navbar {
+      width: 84%;
+      margin-left: 8%;
+      margin-right: 8%;
+    }
+  }
+  
+  /* navbar re-sizing for laptops */
+  @media (min-width: 769px) and (max-width: 1024px) {
+    .navbar {
+      display: flex; /* Use flexbox */
+      justify-content: space-between; /* Space between items */
+      align-items: center; /* Center align */
+      background-color: white;
+      height: 80px;
+      margin: 20px;
+      border-radius: 16px;
+      padding: 0.5rem;
+  }
+
+    .nav-link {
+      font-weight: 400; /* Adjust font weight here */
+      color: #36454F;
+      font-size: 14px; /* Set specific font size for nav links */
+      position: relative;
+      display: flex;
+      margin: 0 10px; /* Consistent margin */
+    }
+  }
+  
+  /* navbar re-sizing for regular resolution */
+  @media (min-width: 1280px) and (max-width: 1440px) {
+    .navbar {
+      width: 90%;
+      margin-left: 5%;
+      margin-right: 5%;
+    }
+  
+    .login-button {
+      margin-right: 1%;
+      display: flex;
+    }
+  }
+  
+  /* navbar re-sizing for higher resolution */
+  @media (min-width: 1600px) and (max-width: 1920px) {
+    .navbar {
+      width: 80%;
+      margin-left: 10%;
+      margin-right: 10%;
+    }
+  
+    .login-button {
+      margin-right: 1%;
+      display: flex;
+    }
+  }
+  
+  /* navbar re-sizing for 2k resolution */
+  @media (min-width: 2048px) and (max-width: 2560px) {
+    .navbar {
+      width: 70%;
+      margin-left: 15%;
+      margin-right: 15%;
+      height: 120px;
+  
+      border-radius: 16px;
+      padding: 0.5rem;
+    }
+  
+    .nav-link {
+      font-size: x-large;
+    }
+  
+    .navbar-brand img {
+      height: 65px; /* Adjust logo height */
+      width: auto;  /* Maintain aspect ratio */
+    }
+  
+    .login-button {
+      font-size: x-large;
+      margin-right: 1%;
+      display: flex;
+    }
+  }
+  
+  /* end media resizing */
+  
