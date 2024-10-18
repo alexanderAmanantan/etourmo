@@ -1,0 +1,132 @@
+/* src/pages/TravelPackages.css */
+.travel-packages {
+    padding: 20px;
+    text-align: center;
+}
+
+.center-name {
+    text-align: center; /* Center the text */
+}
+
+.featured-packages-title {
+    letter-spacing: 5px; 
+    color: #0277e6;
+}
+
+.featured-package-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.featured-package {
+    width: 250px;
+    min-height: 00px; /* Adjust the minimum height as needed */
+    border: 1px solid #e1e1e1;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add transition for smooth effect */
+}
+
+.featured-package-details {
+    padding: 15px;
+}
+
+/* Keyframes for floating effect */
+@keyframes floatIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Hover effect */
+.featured-package:hover {
+    transform: translateY(-5px); /* Move the card up slightly */
+    opacity: 1; /* Fades the card slightly */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3); /* Adds shadow for depth */
+}
+
+/* Optional: Increase contrast on hover */
+.featured-package:hover .package-title,
+.featured-package:hover .package-description {
+    color: #333; /* Example contrast color */
+}
+
+.featured-package-img {
+    height: 250px; /* Set the desired height for the image container */
+    overflow: hidden; /* Hide overflow to prevent cut-off */
+    display: flex; /* Use flexbox to center the image */
+    justify-content: center; /* Center the image horizontally */
+    align-items: center; /* Center the image vertically */
+}
+
+.featured-package-img img {
+    width: 100%; /* Set the width to 100% */
+    height: auto; /* Set height to auto to maintain aspect ratio */
+    max-height: 100%; /* Ensure the image doesn't exceed container height */
+    object-fit: contain; /* Ensure the entire image fits within the container */
+    display: block; /* Ensure no space below the image */
+}
+
+.featured-packages-title {
+    display: flex;
+    align-items: center; /* Vertically center the titles */
+    justify-content: center; /* Center the whole header */
+    gap: 10px; /* Adjust the space between the titles */
+}
+
+.featured-packages-localtitle {
+    margin-right: auto; /* Pushes the local title to the left */
+}
+
+.featured-packages-splittitle {
+    margin: 0 10px; /* Adjust space around the split title */
+}
+
+.featured-packages-internationaltitle {
+    margin-left: auto; /* Pushes the international title to the right */
+}
+
+.featured-package-link {
+    text-decoration: none; /* Remove underline from link */
+    color: inherit; /* Inherit color from parent to avoid link styling */
+}
+
+.featured-package-link:hover .featured-package {
+    transform: translateY(-5px); /* Apply hover effect to the card */
+    opacity: 1;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3); /* Add shadow for depth */
+}
+
+.package-location-container {
+    display: inline-block; /* Ensure the container wraps only around the text */
+    margin: 0 0; /* Center the container horizontally */
+    text-align: center; /* Ensure the text is centered inside the container */
+}
+
+.book-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #0277e6;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    text-transform: uppercase;
+    margin-top: 10px;
+}
+
+.book-button:hover {
+    background-color: #025bb5;
+}
+

@@ -1,0 +1,160 @@
+/* Modal Overlay Styles */
+.modal-overlay {
+    position: fixed; /* Fixes the overlay to the viewport */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6); /* Slightly darker for better contrast */
+    display: flex; /* Centers modal content */
+    align-items: center; /* Vertically centers */
+    justify-content: center; /* Horizontally centers */
+    z-index: 2000; /* Ensure modal is on top of all */
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.2s ease; /* Smooth transition for opacity */
+}
+
+.modal-open {
+    overflow: hidden; /* Prevent body scrolling when modal is open */
+}
+
+/* Visible state */
+.modal-overlay.show {
+    opacity: 1; /* Visible when active */
+    pointer-events: auto; /* Allow interactions */
+    transition: opacity 0.5s ease; /* Adjust this value for opening transition */
+}
+
+.modal-overlay.hidden {
+    display: none; /* Ensures the modal doesn't interfere with layout */
+}
+
+/* Modal Content Styles */
+.modal-content {
+    background-color: white; /* Background color of the modal */
+    border-radius: 20px; /* More pronounced rounded corners */
+    width: 100%; /* Fill the overlay width */
+    height: auto; /* Adjust height based on content */
+    max-width: 100%; /* Max width for larger screens */
+    max-height: 90vh; /* Max height of the modal */
+    overflow: hidden; /* Hide overflow to control it with the modal body */
+   
+    position: relative; /* To position the close button correctly */
+    z-index: 2100; /* Higher than overlay to ensure visibility */
+    transform: scale(0.9); /* Start smaller for entrance animation */
+    transition: transform 0.1s ease, opacity 0.1s ease; /* Transition for opening */
+    padding: 0; /* Remove padding to ensure full coverage */
+    overflow: hidden; /* Ensures the border-radius remains on scroll */
+}
+
+/* Visible state for modal content */
+.modal-overlay.show .modal-content {
+    transform: scale(1); /* Normal size when active */
+    opacity: 1; /* Ensure it's fully visible */
+}
+
+/* Apply Box Shadow to Overlay */
+.modal-overlay::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 20px; /* Match the modal's border-radius */
+    box-shadow: 0 6px 30px rgba(0, 0, 0, 0.3); /* Apply shadow here */
+    pointer-events: none; /* Prevent interaction */
+}
+
+/* Modal Body for Scrollable Content */
+.modal-body {
+    width: 100%; /* Ensure modal body takes full width */
+    height: 100%; /* Ensure modal body takes full height */
+    max-height: calc(90vh - 60px); /* Subtract height for close button and padding */
+    overflow-y: auto; /* Scroll if content overflows */
+    padding: 20px; /* Padding for modal body */
+    border-radius: inherit; /* Keep the rounded edges in sync with the parent */
+    clip-path: inset(0 round 20px); /* Ensures the inner scrollable content also respects the curve */
+}
+
+/* Scrollbar Styling */
+.modal-body::-webkit-scrollbar {
+    width: 10px; /* Width of the scrollbar (adjusted to be narrower) */
+}
+
+.modal-body::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.1); /* Background of the scrollbar track */
+    border-radius: 8px; /* Match the modal's border radius */
+}
+
+.modal-body::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.6); /* Color of the scrollbar thumb */
+    border-radius: 8px; /* Rounded edges for the thumb */
+}
+
+.modal-body::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 0, 0, 0.8); /* Darker color on hover */
+}
+
+/* Close Button Styles */
+.modal-close {
+    background: none; /* No background */
+    border: none; /* No border */
+    font-size: 28px; /* Increased font size for better visibility */
+    color: darkgrey;
+    position: absolute; /* Absolute positioning */
+    top: 0px; /* Positioning from the top */
+    right: 0px; /* Positioning from the right */
+    cursor: pointer; /* Change cursor to pointer */
+    z-index: 2200; /* Ensure close button is above modal content */
+    outline: none; /* Remove default focus outline */
+    transition: color 0.3s ease; /* Smooth transition for color on hover */
+}
+
+/* Change close button color on hover */
+.modal-close:hover {
+    color: rgba(255, 0, 0, 0.8); /* Color change on hover for visibility */
+}
+
+/* Responsive Design */
+@media (max-width: 320px) {
+    .modal-content {
+        max-width: 75%; /* Increase width on very small screens */
+    }
+}
+
+@media (min-width: 321px) and (max-width: 500px) {
+    .modal-content {
+        max-width: 80%; /* Width adjustment for small screens */
+    }
+}
+
+@media (min-width: 501px) and (max-width: 768px) {
+    .modal-content {
+        max-width: 75%; /* Width adjustment for medium screens */
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .modal-content {
+        max-width: 60%; /* Width adjustment for large screens */
+    }
+}
+
+@media (min-width: 1280px) and (max-width: 1440px){
+    .modal-content {
+        max-width: 55%; /* Width adjustment for larger screens */
+    }
+}
+
+@media (min-width: 1600px) and (max-width: 1920px) {
+    .modal-content {
+        max-width: 40%; /* Width adjustment for larger screens */
+    }
+}
+
+@media (min-width: 2048px) and (max-width: 2560px) {
+    .modal-content {
+        max-width: 30%; /* Width adjustment for extra large screens */
+    }
+}
